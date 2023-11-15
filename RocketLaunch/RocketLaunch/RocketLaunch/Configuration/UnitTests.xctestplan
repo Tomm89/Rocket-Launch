@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "82E1D232-AC9C-4621-9934-552CFF76384A",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:RocketLaunch.xcodeproj",
+        "identifier" : "98A641692B0A3DC6007F27CB",
+        "name" : "RocketLaunchTests"
+      }
+    }
+  ],
+  "version" : 1
+}

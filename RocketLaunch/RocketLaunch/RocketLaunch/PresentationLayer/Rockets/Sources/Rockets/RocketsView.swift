@@ -28,6 +28,7 @@ struct RocketsView: View {
                 HStack {
                     HeadlineText(font: AppTheme.Fonts.headlineText, Strings.rocketsListTitle)
                         .padding(.horizontal)
+                        .accessibilityIdentifier(Constants.Accessibility.rocketsHeadlineTitleIdentifier)
                     
                     Spacer()
                 }
@@ -39,7 +40,6 @@ struct RocketsView: View {
                     
                     ForEach(0..<rockets.count, id: \.self) { index in
                         let rocket = rockets[index]
-                        
                         RocketCellView(title: rocket.name, text: rocket.firstFlight)
                             .skeleton(viewModel.state.isLoading)
                             .padding(.vertical, Dimension.paddingMediumLarge)
@@ -49,6 +49,7 @@ struct RocketsView: View {
                             }
                     }
                 }
+                .accessibilityIdentifier(Constants.Accessibility.rocketsListIdentifier)
             } else {
                 RocketsEmptyView()
             }

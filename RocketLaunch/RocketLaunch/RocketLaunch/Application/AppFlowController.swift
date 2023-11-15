@@ -16,10 +16,6 @@ final class AppFlowController: FlowController {
     func start() {
         setupAppearance()
         showSplashScreen()
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
-            self.setupMain()
-        }
     }
     
     func setupMain() {
@@ -29,7 +25,8 @@ final class AppFlowController: FlowController {
     }
     
     private func showSplashScreen() {
-        let vc = BaseHostingController(rootView: SplashScreenView())
+        let vm = SplashViewModel(appFlowController: self)
+        let vc = BaseHostingController(rootView: SplashScreenView(viewModel: vm))
         navigationController.viewControllers = [vc]
     }
     

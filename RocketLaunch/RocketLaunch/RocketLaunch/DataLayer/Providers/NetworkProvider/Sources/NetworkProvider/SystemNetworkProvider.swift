@@ -57,7 +57,9 @@ extension SystemNetworkProvider: NetworkProvider {
         }
         
         // Fire request
+        Logger.log(request: request)
         let (data, response) = try await URLSession.shared.data(for: request)
+        Logger.log(response: response, data: data)
         
         // Catch HTTP errors
         if let httpResponse = response as? HTTPURLResponse {

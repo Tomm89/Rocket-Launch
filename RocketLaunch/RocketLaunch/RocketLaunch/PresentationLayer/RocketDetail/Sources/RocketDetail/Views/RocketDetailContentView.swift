@@ -29,6 +29,7 @@ public struct RocketDetailContentView: View {
         VStack(spacing: Dimension.spaceLarge) {
             HStack {
                 HeadlineText(font: AppTheme.Fonts.headlineText, rocket.name)
+                    .accessibilityIdentifier(Constants.Accessibility.rocketTitleIdentifier)
                 Spacer()
             }
             

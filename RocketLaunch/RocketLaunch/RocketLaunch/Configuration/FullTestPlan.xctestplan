@@ -1,0 +1,31 @@
+{
+  "configurations" : [
+    {
+      "id" : "8D179D22-351E-45B7-AF98-B1C3753DB018",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:RocketLaunch.xcodeproj",
+        "identifier" : "98A641692B0A3DC6007F27CB",
+        "name" : "RocketLaunchTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:RocketLaunch.xcodeproj",
+        "identifier" : "98507CF12B0BA4C500787FFB",
+        "name" : "RocketLaunchUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

@@ -5,6 +5,7 @@
 //  Created by Tomáš Brand on 18.03.2023.
 //
 
+// sourcery: AutoMockable
 public protocol GetRocketUseCase {
     func execute(id: String) async throws -> Rocket
 }
