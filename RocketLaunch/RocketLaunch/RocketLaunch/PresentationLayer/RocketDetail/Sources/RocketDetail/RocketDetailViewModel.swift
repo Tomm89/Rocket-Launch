@@ -46,7 +46,6 @@ final class RocketDetailViewModel: BaseViewModel, ViewModel, ObservableObject {
     }
      
     // MARK: Lifecycle
-    
     private func onDidLoad() {
         executeTask(Task {
             await fetchData()

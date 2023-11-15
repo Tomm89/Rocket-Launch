@@ -53,7 +53,6 @@ struct RocketDetailView: View {
         .edgesIgnoringSafeArea(.all)
         .lifecycle(viewModel)
         .navigationBarBackButtonHidden(true)
-        
         .navigationBarItems(
             leading:
                 Button("") {
@@ -61,7 +60,6 @@ struct RocketDetailView: View {
                 }
                 .buttonStyle(BackButtonStyle())
         )
-        
         .toolbar {
             ToolbarItemGroup(placement: .primaryAction) {
                 Button(Strings.rocketLaunchButtonTitle) {
@@ -70,12 +68,10 @@ struct RocketDetailView: View {
                 .buttonStyle(LaunchButtonStyle())
             }
         }
-        
         .toastView(Binding<ToastData?>(
             get: { viewModel.state.toastData },
             set: { _ in viewModel.onIntent(.dismissToast) }
         ))
-        
         .alert(item: Binding<AlertData?>(
             get: { viewModel.state.alert },
             set: { _ in viewModel.onIntent(.dismissAlert) }

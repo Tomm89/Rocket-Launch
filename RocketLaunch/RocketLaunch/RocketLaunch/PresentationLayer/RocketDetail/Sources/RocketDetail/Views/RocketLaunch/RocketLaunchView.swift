@@ -61,7 +61,6 @@ struct RocketLaunchView: View {
         .backgroundStyle(.mainBackground)
         .lifecycle(viewModel)
         .navigationBarBackButtonHidden(true)
-        
         .navigationBarItems(
             leading:
                 Button("") {
@@ -69,7 +68,6 @@ struct RocketLaunchView: View {
                 }
                 .buttonStyle(BackButtonStyle())
         )
-        
         .toastView(Binding<ToastData?>(
             get: { viewModel.state.toastData },
             set: { _ in viewModel.onIntent(.dismissToast) }

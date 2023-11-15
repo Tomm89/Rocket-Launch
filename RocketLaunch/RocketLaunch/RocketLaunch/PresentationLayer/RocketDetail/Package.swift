@@ -10,7 +10,8 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "RocketDetail",
-            targets: ["RocketDetail"]),
+            targets: ["RocketDetail"]
+        ),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -31,10 +32,6 @@ let package = Package(
                 .product(name: "SharedDomain", package: "SharedDomain"),
                 .product(name: "Resolver", package: "Resolver")
             ]
-        ),
-        .testTarget(
-            name: "RocketDetailTests",
-            dependencies: ["RocketDetail"]
-        ),
+        )
     ]
 )

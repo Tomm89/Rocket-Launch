@@ -9,7 +9,12 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "UserDefaultsProvider",
-            targets: ["UserDefaultsProvider"]),
+            targets: ["UserDefaultsProvider"]
+        ),
+        .library(
+            name: "UserDefaultsProviderMocks",
+            targets: ["UserDefaultsProviderMocks"]
+        )
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -20,9 +25,13 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "UserDefaultsProvider",
-            dependencies: []),
-        .testTarget(
-            name: "UserDefaultsProviderTests",
-            dependencies: ["UserDefaultsProvider"]),
+            dependencies: []
+        ),
+        .target(
+            name: "UserDefaultsProviderMocks",
+            dependencies: [
+                "UserDefaultsProvider"
+            ]
+        )
     ]
 )
